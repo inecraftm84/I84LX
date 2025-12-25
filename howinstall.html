@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I84LX Install Guide</title>
+</head>
+<body>
+<pre>
+.___  ______     _____ .____     ____  ___
+|   |/  __  \   /  |  ||    |    \   \/  /
+|   |>      <  /   |  ||    |     \     / 
+|   /   --   \/    ^   /    |___  /     \ 
+|___\______  /\____   ||_______ \/___/\  \
+           \/      |__|        \/      \_/
+INSTALL GUIDE: EASY AND CLEAR!
+</pre>
+
+<p><a href="index.html">Back to Index</a></p>
+
+<h1>x64 Install Guide</h1>
+
+<h2>1. Check if CLI Installer is installed</h2>
+<p>Run the command:</p>
+<pre>dpkg -l | grep cli-installer</pre>
+<p>If you see <code>cli-installer-antix</code> in the output, you can skip the next step.</p>
+<p>If not installed, run:</p>
+<pre>sudo apt install cli-installer-antix</pre>
+
+<h2>2. Run the installer</h2>
+<p>Run:</p>
+<pre>sudo cli-installer</pre>
+<p>The installer will ask: "Do you want to repartition the disk?" → type <strong>Y</strong></p>
+<p>Select the label type (e.g., GPT).</p>
+<p>Click "New" for free space, set partition size (if no other OS, use full disk size), then click "Write".</p>
+
+<h2>3. Configure partitions</h2>
+<p>Choose root partition (e.g., sda1).</p>
+<p>Select the file system (ext4 recommended).</p>
+<p>Optional: use a separate /home partition? Choose according to your preference.</p>
+<p>If asked "Preserve data in /home?", usually <strong>NO</strong>.</p>
+
+<h2>4. Continue installation</h2>
+<p>The installer will destroy data on the selected partition. Confirm to continue.</p>
+<p>If running antiX-net, note: x64 versions are built on antiX-base,x32 versions are built on antiX-core</p>
+
+<h2>5. Optional packages</h2>
+<p>The installer may ask if you want to install packages via cli-aptiX. Choose according to your needs.</p>
+<p>Confirm to continue and complete the installation.WAIT.</p>
+
+</body>
+</html>
