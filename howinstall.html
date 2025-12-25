@@ -8,7 +8,7 @@
 <body>
 <pre>
 .___  ______     _____ .____     ____  ___
-|   |/  __  \   /  |  ||    |    \   \/  /
+|   |/  __  \   /  |  ||    |    \   \/  / 
 |   |>      <  /   |  ||    |     \     / 
 |   /   --   \/    ^   /    |___  /     \ 
 |___\______  /\____   ||_______ \/___/\  \
@@ -21,32 +21,55 @@ INSTALL GUIDE: EASY AND CLEAR!
 <h1>x64 Install Guide</h1>
 
 <h2>1. Check if CLI Installer is installed</h2>
-<p>Run the command:</p>
+<p>Run the following command:</p>
 <pre>dpkg -l | grep cli-installer</pre>
 <p>If you see <code>cli-installer-antix</code> in the output, you can skip the next step.</p>
-<p>If not installed, run:</p>
+<p>If it is not installed, run the following command:</p>
 <pre>sudo apt install cli-installer-antix</pre>
 
 <h2>2. Run the installer</h2>
-<p>Run:</p>
+<p>Execute the command:</p>
 <pre>sudo cli-installer</pre>
 <p>The installer will ask: "Do you want to repartition the disk?" → type <strong>Y</strong></p>
-<p>Select the label type (e.g., GPT).</p>
-<p>Click "New" for free space, set partition size (if no other OS, use full disk size), then click "Write".</p>
+<p>Select the partitioning scheme (e.g., GPT).</p>
+<p>Click "New" for free space, set the partition size (if this is the only OS, use the full disk size), then click "Write".</p>
 
 <h2>3. Configure partitions</h2>
-<p>Choose root partition (e.g., sda1).</p>
-<p>Select the file system (ext4 recommended).</p>
-<p>Optional: use a separate /home partition? Choose according to your preference.</p>
-<p>If asked "Preserve data in /home?", usually <strong>NO</strong>.</p>
+<p>Choose the root partition (e.g., sda1).</p>
+<p>Select the file system (ext4 is recommended).</p>
+<p>Optional: You can choose to use a separate /home partition according to your preference.</p>
+<p>If asked "Preserve data in /home?", usually choose <strong>NO</strong>.</p>
 
 <h2>4. Continue installation</h2>
-<p>The installer will destroy data on the selected partition. Confirm to continue.</p>
-<p>If running antiX-net, note: x64 versions are built on antiX-base,x32 versions are built on antiX-core</p>
+<p>The installer will erase data on the selected partition. Confirm to continue.</p>
+<p>If you're using antiX-net, note that older x64 versions are based on antiX-base, while newer antiX-core x32 versions are based on antiX-core.</p>
 
 <h2>5. Optional packages</h2>
-<p>The installer may ask if you want to install packages via cli-aptiX. Choose according to your needs.</p>
-<p>Confirm to continue and complete the installation.WAIT.</p>
+<p>The installer may ask if you'd like to install additional packages via cli-aptiX. Choose according to your needs.</p>
+<p>Confirm to continue and complete the installation. Please wait.</p>
 
+<h2>6. Where should GRUB be installed?</h2>
+<p>1. MBR (32-bit recommended) </p>
+<p>2. Root partition (your choice)</p>
+<p>3. ESP (EFI System Partition, 64-bit recommended)</p>
+<p>4. Do not install GRUB (for advanced users)</p>
+
+<h2>7. Computer Name?</h2>
+<p>Choose a name for your computer, such as I84, computer, antix1, mycomputer, XxGamerXx.</p>
+
+<h2>8. System locale</h2>
+<p>Your choice, e.g., Taiwan: zh_TW, China: zh_CN, US: en_US.</p>
+
+<h2>9. Set up keyboard</h2>
+<p>If your keyboard layout is not QWERTY, you can select your preferred layout.</p>
+
+<h2>10. Console layout</h2>
+<p>If you dislike the default console font, you can choose a different one.</p>
+
+<h2>11. Timezone</h2>
+<p>It is recommended to set the correct timezone.</p>
+
+<h2>12. Is this a snapshot?</h2>
+<p>If asked, select "Yes".</p>
 </body>
 </html>
